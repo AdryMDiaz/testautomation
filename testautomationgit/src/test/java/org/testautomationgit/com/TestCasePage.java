@@ -16,6 +16,7 @@ public class TestCasePage {
 	
 private WebDriver driver;
 	
+	//Elementos página REGISTER
 	By registerLinkLocator = By.linkText("REGISTER");
 	By registerPageLocator = By.xpath("//img[@src=\"images/mast_register.gif\"]");
 	By registerMailLocator = By.id("email");
@@ -24,6 +25,7 @@ private WebDriver driver;
 	By registerBtnLocator = By.name("submit");
 	By homeLinkLocator = By.linkText("Home");
 	
+	//Elementos página SIGN-ON
 	By signinLocator = By.name("userName");
 	By signinpasswordLocator = By.name("password");
 	By signBtnLocator = By.name("submit");

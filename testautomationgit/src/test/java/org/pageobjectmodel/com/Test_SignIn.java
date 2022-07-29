@@ -31,7 +31,19 @@ public class Test_SignIn {
 		Thread.sleep(2000);
 		assertEquals("Thank you for Loggin.",signInPage.signInMessage());
 		signInPage.click(signInPage.flightsLocator);
-		Thread.sleep(10000);
+		Thread.sleep(5000);
+		
+		assertEquals(signInPage.selectDropdownList_Passenger(), "2");
+		assertEquals(signInPage.selectDropdownList_DepartingFrom(), "Paris");
+		assertEquals(signInPage.selectDropdownList_OnMonth(), "December");
+		assertEquals(signInPage.selectDropdownList_OnDay(), "16");
+		assertEquals(signInPage.selectDropdownList_ArrivingIn(), "London");
+		assertEquals(signInPage.selectDropdownList_ReturningMonth(), "December");
+		assertEquals(signInPage.selectDropdownList_ReturningDay(), "31");
+		assertEquals(signInPage.selectDropdownList_Airline(), "Blue Skies Airlines");
+		signInPage.click(signInPage.flightsBtnContinueLocator);
+		signInPage.findElement(signInPage.flightsFinderLocator);
+		Thread.sleep(2000);
 	}
 
 }

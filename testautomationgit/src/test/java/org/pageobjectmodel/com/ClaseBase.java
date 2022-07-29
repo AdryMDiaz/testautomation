@@ -50,6 +50,9 @@ public class ClaseBase {
 		driver.findElement(locator).click();
 	}
 	
+	public void click(WebElement element) {
+		element.click();
+	}
 	public Boolean isDisplayed (By locator) {
 		try {
 			return driver.findElement(locator).isDisplayed();
